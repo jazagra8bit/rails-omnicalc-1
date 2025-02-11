@@ -1,0 +1,17 @@
+<h1>Payment Calculation Results</h1>
+
+<dl>
+  <dt>APR</dt>
+  <dd><%= "%.4f%%" % @apr %></dd>
+
+  <dt>Years</dt>
+  <dd><%= @years %></dd>
+
+  <dt>Principal</dt>
+  <dd><%= @principal.to_fs(:currency) %></dd>
+
+  <dt>Monthly Payment</dt>
+  <dd><%= @monthly_payment.to_fs(:currency) %></dd>
+</dl>
+
+<a href="/payment/new">Calculate another payment</a>
